@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    https://developer.android.com/develop/sensors-and-location/location/permissions-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".BudgieFlightTrackerApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:label="@string/app_display_name"
+        android:icon="@drawable/airplane_logo"
+        android:roundIcon="@drawable/airplane_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity
+            android:name=".pages.AlertPage"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+        />
+        <activity
+            android:name=".pages.SettingPage"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+        />
+        <activity
+            android:name=".pages.LoginPage"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".pages.RegistrationPage"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+
+        </activity>
+
+        <!--
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/airplane_logo" />
+
+
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        </activity>
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,3 @@
+package com.example.budgieflighttracker.jsontokt
+
+class TrackedFlightApiResponse

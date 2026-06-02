@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/surface">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_sheet_background"
+            android:paddingBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Handle -->
+            <View
+                android:id="@+id/handleView"
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bottom_sheet_handle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Close Button -->
+            <ImageView
+                android:id="@+id/closeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.98"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.029999971"
+                app:tint="@color/black" />
+
+            <!-- Airport Flag -->
+            <ImageView
+                android:id="@+id/airportFlagImageView"
+                android:layout_width="32dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_google"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/handleView"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <!-- Airport Name -->
+            <TextView
+                android:id="@+id/airportNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Cape Town Intl"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@id/closeButton"
+                app:layout_constraintStart_toEndOf="@id/airportFlagImageView"
+                app:layout_constraintTop_toTopOf="@id/airportFlagImageView" />
+
+            <!-- Airport Current Time & Date -->
+            <TextView
+                android:id="@+id/airportTimeDateTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="12:52 SAST Thu, 21 Aug"
+                android:textColor="@color/grey_text_dark_borders"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/airportNameTextView"
+                app:layout_constraintStart_toStartOf="@id/airportNameTextView"
+                app:layout_constraintTop_toBottomOf="@id/airportNameTextView" />
+
+            <!-- Departures Button/Card -->
+            <FrameLayout
+                android:id="@+id/departuresCardView"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/flight_info_card"
+                app:layout_constraintEnd_toStartOf="@+id/arrivalsCardView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/airportFlagImageView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/departuresLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/departures"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/departuresValueTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="102"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Arrivals Button/Card -->
+            <FrameLayout
+                android:id="@+id/arrivalsCardView"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/departuresCardView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/departuresCardView"
+                app:layout_constraintTop_toTopOf="@id/departuresCardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/flight_info_card"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/arrivalsLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/arrivals"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/arrivalsValueTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="106"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

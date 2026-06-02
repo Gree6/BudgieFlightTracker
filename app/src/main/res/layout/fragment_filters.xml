@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="20dp"
+    tools:context=".fragments.FiltersFragment"
+    tools:visibility="visible">
+
+    <!-- Background overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Filter Panel -->
+    <LinearLayout
+        android:id="@+id/filterPanel"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@drawable/menu_background"
+        android:elevation="8dp"
+        android:orientation="vertical">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/filters"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/closeButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/exit_button_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_close"
+                app:tint="@color/black" />
+        </LinearLayout>
+
+        <!-- Content Area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:clickable="false"
+                android:contextClickable="false"
+                android:longClickable="false"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/surface"
+                    android:backgroundTint="@color/surface"
+                    android:clickable="false"
+                    android:contextClickable="false"
+                    android:longClickable="false"
+                    android:orientation="vertical">
+
+                    <!-- Country Filter -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp"
+                        android:clickable="false"
+                        android:contextClickable="false"
+                        android:longClickable="false"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/light_primary"
+                            android:backgroundTint="@color/light_primary"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:longClickable="false"
+                            app:cardBackgroundColor="@color/light_primary"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="0dp"
+                            app:cardMaxElevation="0dp">
+
+                            <LinearLayout
+                                android:id="@+id/countryFilter"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/light_primary"
+                                android:backgroundTint="@color/light_primary"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:focusable="false"
+                                android:gravity="center_vertical"
+                                android:longClickable="false"
+                                android:orientation="horizontal"
+                                android:padding="16dp">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:clickable="false"
+                                    android:contextClickable="false"
+                                    android:longClickable="false"
+                                    android:src="@drawable/ic_country"
+                                    app:tint="@color/black" />
+
+                                <Spinner
+                                    android:id="@+id/countrySpinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="-8dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/light_primary"
+                                    android:entries="@array/countries_list"
+                                    android:pointerIcon="top_right_diagonal_double_arrow"
+                                    android:theme="@style/BudgeyFilterSpinner"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="false"
+                                    android:contextClickable="false"
+                                    android:fontFamily="@font/inter_medium"
+                                    android:longClickable="false"
+                                    android:text="@string/country"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:clickable="false"
+                                    android:contextClickable="false"
+                                    android:longClickable="false"
+                                    android:src="@drawable/ic_arrow_forward"
+                                    android:visibility="visible"
+                                    app:tint="@color/black" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <!-- Divider -->
+
+                    <!-- Aircraft Type Filter -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp"
+                        android:clickable="false"
+                        android:contextClickable="false"
+                        android:longClickable="false"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:longClickable="false"
+                            app:cardBackgroundColor="@color/light_primary"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="0dp"
+                            app:cardMaxElevation="0dp">
+
+                            <LinearLayout
+                                android:id="@+id/aircraftTypeFilter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/light_primary"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:focusable="false"
+                                android:gravity="center_vertical"
+                                android:longClickable="false"
+                                android:orientation="horizontal"
+                                android:padding="16dp">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:clickable="false"
+                                    android:contextClickable="false"
+                                    android:longClickable="false"
+                                    android:src="@drawable/ic_aircraft"
+                                    app:tint="@color/black" />
+
+                                <Spinner
+                                    android:id="@+id/aircraftSpinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="-8dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/light_primary"
+                                    android:entries="@array/aircraft_list"
+                                    android:theme="@style/BudgeyFilterSpinner"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="false"
+                                    android:contextClickable="false"
+                                    android:fontFamily="@font/inter_medium"
+                                    android:longClickable="false"
+                                    android:text="@string/aircraft_type"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:clickable="false"
+                                    android:contextClickable="false"
+                                    android:longClickable="false"
+                                    android:src="@drawable/ic_arrow_forward"
+                                    app:tint="@color/black" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp"
+                        app:cardBackgroundColor="@color/light_primary"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp">
+
+                        <LinearLayout
+                            android:id="@+id/departureDestinationFilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/light_primary"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:longClickable="false"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="16dp"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:longClickable="false"
+                                android:src="@drawable/ic_destination"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/depatureTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/inter_medium"
+                                android:text="@string/departure_destination"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:visibility="visible" />
+
+                            <SearchView
+                                android:id="@+id/departureSearchView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="-10dp"
+                                android:backgroundTint="@color/light_primary"
+                                android:iconifiedByDefault="false"
+                                android:paddingStart="-40dp"
+                                android:queryBackground="@color/light_primary"
+                                android:searchIcon="@color/light_primary"
+                                android:submitBackground="@color/light_primary"
+                                android:theme="@style/BudgeyFilterSpinner"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:longClickable="false"
+                                android:src="@drawable/ic_arrow_forward"
+                                app:tint="@color/black" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/light_primary"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp">
+
+                        <LinearLayout
+                            android:id="@+id/arrivalDestinationFilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:longClickable="false"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="16dp"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:longClickable="false"
+                                android:src="@drawable/ic_destination"
+                                app:tint="@color/black" />
+
+                            <TextView
+                                android:id="@+id/arrivalTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/inter_medium"
+                                android:text="@string/arrival_destination"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:visibility="visible" />
+
+                            <SearchView
+                                android:id="@+id/arrivalSearchView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="-10dp"
+                                android:backgroundTint="@color/grey_text_dark_borders"
+                                android:iconifiedByDefault="false"
+                                android:paddingStart="-40dp"
+                                android:queryBackground="@color/light_primary"
+                                android:searchIcon="@color/light_primary"
+                                android:submitBackground="@color/light_primary"
+                                android:theme="@style/BudgeyFilterSpinner"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:longClickable="false"
+                                android:src="@drawable/ic_arrow_forward"
+                                app:tint="@color/black" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Bottom Action Buttons -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginRight="-2dp"
+            android:background="@drawable/menu_bottom_background"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dark_button"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/save"
+                android:textColor="@color/surface"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/light_border_button"
+                android:fontFamily="@font/inter_medium"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/cancel"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

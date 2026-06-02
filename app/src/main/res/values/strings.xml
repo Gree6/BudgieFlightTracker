@@ -1,0 +1,154 @@
+<resources>
+    <string name="app_name">AndroidMapTest</string>
+    <string name="app_display_name" translatable="false">Budgie Tracker</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <string name="default_web_client_id" translatable="false">486178126787-amq993qq4vqje09ocds95aihmnuhg6e5.apps.googleusercontent.com</string>
+    <string name="facebook_app_id" translatable="false">0</string>
+    <string name="facebook_client_token" translatable="false">GOING TO IMPLEMENT SOON</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb0</string>
+
+
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="alerts">Alerts</string>
+    <string name="high_performance_aircraft_jets">High Performance Aircraft (Jets)</string>
+    <string name="heavy_aircraft">Heavy aircraft</string>
+    <string name="uav_unmanned_aerial_vehicle">UAV (Unmanned Aerial Vehicle)</string>
+    <string name="enable_alerts">Enable alerts for specific aircraft types to receive notifications when they appear in your area.</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="password">Password</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="log_in">Log In</string>
+    <string name="or">Or</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="playback">Playback</string>
+    <string name="settings">Settings</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="full_name">Full Name</string>
+    <string name="enter_your_full_name">Enter your full name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="satellite_view">Satellite View</string>
+    <string name="plane_colour">Plane Colour</string>
+    <string name="show_gliders">Show gliders</string>
+    <string name="push_notifications">Push notifications</string>
+    <string name="enable_afrikaans">Enable Afrikaans</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="log_out">Log Out</string>
+    <string name="filters">Filters</string>
+    <string name="country">Country</string>
+    <string name="aircraft_type">Aircraft type</string>
+    <string name="departure_destination">Departure Destination</string>
+    <string name="arrival_destination">Arrival Destination</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="speed">Speed</string>
+    <string name="altitude">Altitude</string>
+    <string name="course">Course</string>
+    <string name="departures">Departures</string>
+    <string name="arrivals">Arrivals</string>
+    <string name="email_is_required">Email is required</string>
+    <string name="password_is_required">Password is required</string>
+    <string name="logging_in">Logging in…</string>
+    <string name="no_account_found">No account found with this email. Please sign up.</string>
+    <string name="incorrect_password">Incorrect password. Please try again.</string>
+    <string name="network_error">Network error. Please check your connection.</string>
+    <string name="login_failed">Login failed: </string>
+    <string name="search_flights">Search Flights</string>
+    <string name="Black">Black</string>
+    <string name="Red">Red</string>
+    <string name="Yellow">Yellow</string>
+    <string name="Blue">Blue</string>
+    <string name="Purple">Purple</string>
+
+    <!-- Playback Fragment Strings -->
+    <string name="playback_offline">Playback (Offline)</string>
+    <string name="close">Close</string>
+    <string name="cached_hours">Cached Hours:</string>
+    <string name="selected_hour_none">Selected hour: (none)</string>
+    <string name="selected_hour_format">Selected hour: %s</string>
+    <string name="prev">Prev</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="next">Next</string>
+    <string name="playlist">Playlist:</string>
+    <string name="no_cached_flights">No cached flights for the selected hour.</string>
+    <string name="Date">Date:</string>
+    <string name="loading_flights_from_database">Loading flights from database…</string>
+    <string name="loading_hours_from_database">Loading %1$d hours from Firestore…</string>
+    <string name="loaded_hours">Loaded %1$d/%2$d hours…</string>
+    <string name="firestore_unavailable_loading_local_cache">Firestore unavailable, loading local cache…</string>
+    <string name="loading_hours_from_local_cache">Loading %1$d hours from local cache…</string>
+    <string name="loaded_hours_from_cache">Loaded %1$d/%2$d hours from cache…</string>
+    <string name="deleting">Deleting…</string>
+
+
+    <string-array name="countries_list">
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Bangladesh</item>
+        <item>Belgium</item>
+        <item>Brazil</item>
+        <item>Canada</item>
+        <item>China</item>
+        <item>Denmark</item>
+        <item>Egypt</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>India</item>
+        <item>Italy</item>
+        <item>Japan</item>
+        <item>Mexico</item>
+        <item>Netherlands</item>
+        <item>Norway</item>
+        <item>Russia</item>
+        <item>Saudi Arabia</item>
+        <item>South Africa</item>
+        <item>Spain</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>United Kingdom</item>
+        <item>United States</item>
+        <item>Zimbabwe</item>
+    </string-array>
+
+    <string-array name="aircraft_list">
+        <item>No information at all</item>
+        <item>No ADS-B Emitter Category Information</item>
+        <item>Light (&lt; 15,500 lbs)</item>
+        <item>Small (15,500 to 75,000 lbs)</item>
+        <item>Large (75,000 to 300,000 lbs)</item>
+        <item>High Vortex Large (e.g., B-757)</item>
+        <item>Heavy (&gt; 300,000 lbs)</item>
+        <item>High Performance (&gt; 5g acceleration and 400 kts)</item>
+        <item>Rotorcraft</item>
+        <item>Glider / Sailplane</item>
+        <item>Lighter-than-air</item>
+        <item>Parachutist / Skydiver</item>
+        <item>Ultralight / Hang-glider / Paraglider</item>
+        <item>Reserved</item>
+        <item>Unmanned Aerial Vehicle</item>
+        <item>Space / Trans-atmospheric vehicle</item>
+        <item>Surface Vehicle – Emergency Vehicle</item>
+        <item>Surface Vehicle – Service Vehicle</item>
+        <item>Point Obstacle (includes tethered balloons)</item>
+        <item>Cluster Obstacle</item>
+        <item>Line Obstacle</item>
+    </string-array>
+</resources>

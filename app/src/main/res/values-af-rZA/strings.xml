@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndroidMapTest</string>
+    <string name="login">Teken aan</string>
+    <string name="don_t_have_an_account">Eerste keer?</string>
+    <string name="sign_up">Registreer</string>
+    <string name="email">E-pos</string>
+    <string name="password">Wag woord</string>
+    <string name="remember_me">Bly ingeteken</string>
+    <string name="or">Of</string>
+    <string name="continue_with_google">Teken aan met Google</string>
+    <string name="continue_with_facebook">Teken aan met Facebook</string>
+    <string name="playback">Speel terug</string>
+    <string name="full_name">Volle naam</string>
+    <string name="alerts">Kennisgewings</string>
+    <string name="high_performance_aircraft_jets">Hoë-prestasie Vliegtuie (Jets)</string>
+    <string name="heavy_aircraft">Swaar Vliegtuie</string>
+    <string name="uav_unmanned_aerial_vehicle">OAV (Onbemande Lugvaartuig)</string>
+    <string name="enable_alerts">Aktiveer kennisgewings vir spesifieke vliegtuigsoorte om in kennis gestel te word wanneer hulle in jou area verskyn.</string>
+    <string name="enter_your_email">Voer jou e-posadres in</string>
+    <string name="enter_your_password">Voer jou wagwoord in</string>
+    <string name="forgot_password">Wagwoord vergeet?</string>
+    <string name="log_in">Teken in</string>
+    <string name="settings">Instellings</string>
+    <string name="already_have_an_account">Het jy reeds \'n profiel?</string>
+    <string name="enter_your_full_name">Voer jou volle naam in</string>
+    <string name="confirm_password">Bevestig Wagwoord</string>
+    <string name="confirm_your_password">Bevestig jou wagwoord</string>
+    <string name="satellite_view">Satelliet-aansig</string>
+    <string name="plane_colour">Kleur van vliegtuie</string>
+    <string name="show_gliders">Wys sweeftuie</string>
+    <string name="push_notifications">Stootkennisgewings</string>
+    <string name="enable_afrikaans">Aktiveer Afrikaans</string>
+    <string name="delete_account">Vee Rekening uit</string>
+    <string name="log_out">Teken uit</string>
+    <string name="filters">Filters</string>
+    <string name="country">Land</string>
+    <string name="aircraft_type">Vliegtuigtipe</string>
+    <string name="departure_destination">Vertrekbestemming</string>
+    <string name="arrival_destination">Aankomsbestemming</string>
+    <string name="save">Stoor</string>
+    <string name="cancel">Kanselleer</string>
+    <string name="speed">Spoed</string>
+    <string name="altitude">Hoogte</string>
+    <string name="course">Roete</string>
+    <string name="departures">Vertrekke</string>
+    <string name="arrivals">Aankomstes</string>
+    <string name="email_is_required">E-pos word vereis</string>
+    <string name="password_is_required">Wagwoord word vereis</string>
+    <string name="logging_in">Teken nou in…</string>
+    <string name="no_account_found">Geen rekening met hierdie e-pos gevind nie. Registreer asseblief.</string>
+    <string name="incorrect_password">Verkeerde wagwoord. Probeer asseblief weer.</string>
+    <string name="network_error">Netwerkfout. Gaan asseblief jou verbinding na.</string>
+    <string name="login_failed">Aanteken het misluk: </string>
+    <string name="search_flights">Soek vlugte</string>
+    <string name="Black">Swart</string>
+    <string name="Red">Rooi</string>
+    <string name="Yellow">Geel</string>
+    <string name="Blue">Blou</string>
+    <string name="Purple">Pers</string>
+
+    <!-- Playback Fragment Strings -->
+    <string name="playback_offline">Terugspeel (Vanlyn)</string>
+    <string name="close">Sluit</string>
+    <string name="cached_hours">Gestoorde Ure:</string>
+    <string name="selected_hour_none">Geselekteerde uur: (geen)</string>
+    <string name="selected_hour_format">Geselekteerde uur: %s</string>
+    <string name="prev">Vorige</string>
+    <string name="play">Begin</string>
+    <string name="pause">Stop</string>
+    <string name="next">Volgende</string>
+    <string name="playlist">Speellys:</string>
+    <string name="no_cached_flights">Geen gestoorde vlugte vir die uur nie.</string>
+    <string name="Date">Datum:</string>
+    <string name="loading_flights_from_database">Besig om vlugte te laai…</string>
+    <string name="loading_hours_from_database">Besig om %1$d ure te laai…</string>
+    <string name="loaded_hours">Klaar %1$d/%2$d ure gelaai…</string>
+    <string name="firestore_unavailable_loading_local_cache">Databasse onbereikbaar, laai nou gestoorde data…</string>
+    <string name="loading_hours_from_local_cache">Besig om %1$d gestoorde ure te laai…</string>
+    <string name="loaded_hours_from_cache">Klaar %1$d/%2$d ure gelaai…</string>
+    <string name="deleting">Vee nou uit…</string>
+
+    <string-array name="countries_list">
+        <item>Afganistan</item>
+        <item>Albanië</item>
+        <item>Algerië</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Argentinië</item>
+        <item>Armenië</item>
+        <item>Australië</item>
+        <item>Oostenryk</item>
+        <item>Bangladesj</item>
+        <item>België</item>
+        <item>Brasilië</item>
+        <item>Kanada</item>
+        <item>China</item>
+        <item>Denemarke</item>
+        <item>Egipte</item>
+        <item>Finland</item>
+        <item>Frankryk</item>
+        <item>Duitsland</item>
+        <item>Indië</item>
+        <item>Italië</item>
+        <item>Japan</item>
+        <item>Meksiko</item>
+        <item>Nederland</item>
+        <item>Noorweë</item>
+        <item>Rusland</item>
+        <item>Saoedi-Arabië</item>
+        <item>Suid-Afrika</item>
+        <item>Spanje</item>
+        <item>Swede</item>
+        <item>Switserland</item>
+        <item>Verenigde Koninkryk</item>
+        <item>Verenigde State</item>
+        <item>Zimbabwe</item>
+    </string-array>
+
+    <string-array name="aircraft_list">
+        <item>Geen inligting</item>
+        <item>Geen ADS-B-uitstralerkategorie-inligting</item>
+        <item>Lig (&lt; 15,500 lbs)</item>
+        <item>Klein (15,500 tot 75,000 lbs)</item>
+        <item>Groot (75,000 tot 300,000 lbs)</item>
+        <item>Groot met hoë-kolk (bv. B-757)</item>
+        <item>Swaar (&gt; 300,000 lbs)</item>
+        <item>Hoë-prestasie (&gt; 5g versnelling en 400 kts)</item>
+        <item>Helikopter</item>
+        <item>Sweeftuig</item>
+        <item>Ligter-as-lug</item>
+        <item>Valhelmspringer</item>
+        <item>Ultralig / Vlieër / Valskerm</item>
+        <item>Gereserveer</item>
+        <item>Onbemande Lugvaartuig</item>
+        <item>Ruimte / Trans-atmosferiese voertuig</item>
+        <item>Grondvoertuig – Noodvoertuig</item>
+        <item>Grondvoertuig – Diensvoertuig</item>
+        <item>Punt-hindernis (sluit vasgemaakte ballonne in)</item>
+        <item>Groep-hindernis</item>
+        <item>Lyn-hindernis</item>
+    </string-array>
+
+</resources>
